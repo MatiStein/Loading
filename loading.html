@@ -1,0 +1,50 @@
+<style>
+    /* Styles for the loading spinner */
+    .loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+    }
+  
+    .loading > .spinner {
+      width: 3rem;
+      height: 3rem;
+      border: 0.3rem solid #ccc;
+      border-radius: 50%;
+      border-top-color: #333;
+      animation: spin 1s linear infinite;
+    }
+  
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  
+  <div class="loading">
+    <div class="spinner"></div>
+  </div>
+  
+  <script>
+    async function loadPage() {
+      // Wait for the promise to be resolved
+      const data = await fetch('/path/to/data.json').then(response => response.json());
+  
+      // Hide the loading spinner
+      document.querySelector('.loading').style.display = 'none';
+  
+      // Render the page with the data
+      document.body.innerHTML = `
+        <h1>${data.title}</h1>
+        <p>${data.description}</p>
+        `;}
+    
+        function redirect() {
+            window.location.replace("https://twitter.com/MatiStein/status/1599359930254835712?s=20&t=CFzz6drvS1CEmEaGlSi1IQ");
+        }
+        setTimeout(redirect, 5000); // 5000 milliseconds = 5 seconds
+    </script>
+</body>
+</html>
